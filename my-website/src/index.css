@@ -1,0 +1,32 @@
+@config "../tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== CSS-First Configuration ===== */
+@layer base {
+  html, body {
+    @apply h-full w-full;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-beige text-neutral-900 font-sans min-h-full w-full overflow-x-hidden;
+  }
+
+  #root {
+    @apply min-h-full w-full;
+  }
+
+  /* 2. All headings use Playfair Display serif */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  /* 3. Anchor tags default to neutral-900 with a subtle hover to neutral-600 */
+  a {
+    @apply text-neutral-900 hover:text-neutral-600;
+  }
+}
